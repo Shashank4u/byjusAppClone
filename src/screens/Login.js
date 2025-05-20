@@ -12,7 +12,7 @@ import CountryPicker from 'react-native-country-picker-modal';
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
 
-const PhoneLogin = () => {
+const Login = ({ navigation }) => {
   const [countryCode, setCountryCode] = useState('IN');
   const [callingCode, setCallingCode] = useState('91');
   const [withCallingCode, setWithCallingCode] = useState(true);
@@ -67,7 +67,7 @@ const PhoneLogin = () => {
           We'll send you a code by SMS to confirm your phone number.
         </Text>
         
-        <TouchableOpacity style={styles.button} disabled={phone.length < 10 ? true : false}>
+        <TouchableOpacity style={styles.button} disabled={phone.length < 10 ? true : false} onPress={()=>{navigation.push('Dashboard')}}>
           <Text style={styles.buttonText}>Continue</Text>
         </TouchableOpacity>
       </View>
@@ -75,7 +75,7 @@ const PhoneLogin = () => {
   );
 };
 
-export default PhoneLogin;
+export default Login;
 
 const styles = StyleSheet.create({
   container: {

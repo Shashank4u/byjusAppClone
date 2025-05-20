@@ -7,8 +7,8 @@ const ScreenA = ({ navigation }) => {
     <ScrollView style={styles.container}>
       <Text>ScrollingScreen</Text>
       <Button disabled={false} color='green' title='Navigate to ScrollingScreen' onPress={() => navigation.push('scrolling')} />
-      <Text>ScreenB</Text>
-      <Button title='Navigate to ScrrenB' onPress={() => navigation.push('second')} />
+      <Text>ScreenB</Text> 
+      <Button title='Navigate to ScrrenB' onPress={() => navigation.push('secod')}/>
     </ScrollView>
   )
 }
